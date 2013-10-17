@@ -35,15 +35,17 @@ public class Driver {
       e.printStackTrace();
     }
 
+    DataSet dataSet = null;
+    try {
+      dataSet = ArffReader.readArffFile(new File(fileName));
 
+      // Find Coverings
 
-    // Read Arff File
-    ArffData arffData = ArffReader.readArffFile(new File(fileName));
+      // Reduce Rules
 
-    // Find Coverings
-
-    // Reduce Rules
-
-    // Output Rules
+      // Output Rules
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
   }
 }
