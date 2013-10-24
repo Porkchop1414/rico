@@ -13,6 +13,12 @@ public class DataSet {
     data = new LinkedList<Data>();
   }
 
+  public void printAttributeList() {
+    for(int i = 0; i < attributes.size(); i++) {
+      System.out.println(i + ": " + attributes.get(i).getName());
+    }
+  }
+
   public void setName(String name) { this.name = name; }
   public void addAttribute(Attribute attribute) { this.attributes.add(attribute); }
   public void addData(Data data) { this.data.add(data); }
@@ -20,4 +26,7 @@ public class DataSet {
   public String getName() { return name; }
   public Attribute getAttribute(int index) { return attributes.get(index); }
   public List<Data> getData() { return data; }
+
+  public int getAttributesSize() { return attributes.size(); }
+  public int getDataSize() { return data.size(); }
 }
