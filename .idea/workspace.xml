@@ -7,19 +7,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a37a6534-bf96-4db9-b530-2acd2448c54e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/indigenous/Covering.java" />
-      <change type="MOVED" beforePath="C:\Users\Alex\Dropbox\projects\rico\res\wilkinsonMatrix.arff" afterPath="$PROJECT_DIR$/res/wilkinson.arff" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/ArffReader.java" afterPath="$PROJECT_DIR$/src/com/indigenous/ArffReader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/DataSet.java" afterPath="$PROJECT_DIR$/src/com/indigenous/DataSet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/Attribute.java" afterPath="$PROJECT_DIR$/src/com/indigenous/Attribute.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/Driver.java" afterPath="$PROJECT_DIR$/src/com/indigenous/Driver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rico.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382638056739" ignored="false" />
-    <file path="/Driver.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382634691532" ignored="false" />
-    <file path="/Attribute.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382027996770" ignored="false" />
-    <file path="/ArffReader.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382038473942" ignored="false" />
+    <file path="/Dummy.txt" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383771936949" ignored="false" />
+    <file path="/Driver.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383776388344" ignored="false" />
+    <file path="/Attribute.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383776280646" ignored="false" />
+    <file path="/ArffReader.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383776166845" ignored="false" />
     <file path="/AttributeType.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382026730962" ignored="false" />
     <file path="/ArffData.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382028372558" ignored="false" />
     <file path="/Data.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382038425765" ignored="false" />
@@ -43,6 +41,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -80,7 +79,6 @@
       </breakpoint>
     </breakpoint_any>
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -90,19 +88,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Driver.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Driver.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="36" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Covering.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="14" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
+            <state line="78" column="23" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.32586208">
               <folding />
             </state>
           </provider>
@@ -111,16 +100,25 @@
       <file leaf-file-name="Attribute.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="10" selection-start="167" selection-end="187" vertical-scroll-proportion="0.0">
+            <state line="38" column="4" selection-start="847" selection-end="961" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArffReader.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ArffReader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/ArffReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="38" selection-start="675" selection-end="675" vertical-scroll-proportion="0.49827588">
+            <state line="46" column="91" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributeType.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/indigenous/AttributeType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="10" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -129,7 +127,7 @@
       <file leaf-file-name="Data.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="53" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+            <state line="6" column="29" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,7 +136,7 @@
       <file leaf-file-name="DataSet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/DataSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="0" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
+            <state line="8" column="32" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -168,11 +166,11 @@
         <option value="$PROJECT_DIR$/src/com/indigenous/AttributeType.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/ArffData.java" />
         <option value="$PROJECT_DIR$/res/small.arff" />
-        <option value="$PROJECT_DIR$/src/com/indigenous/Attribute.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/Data.java" />
-        <option value="$PROJECT_DIR$/src/com/indigenous/ArffReader.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/DataSet.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/Covering.java" />
+        <option value="$PROJECT_DIR$/src/com/indigenous/ArffReader.java" />
+        <option value="$PROJECT_DIR$/src/com/indigenous/Attribute.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/Driver.java" />
       </list>
     </option>
@@ -209,7 +207,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -276,7 +274,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -291,19 +289,19 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cs342/Lab08" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="project.structure.side.proportion" value="0.0" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rico" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rico" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -347,6 +345,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -372,19 +383,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -477,7 +475,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.67408234" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24919957" sideWeight="0.67408234" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3259177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -605,56 +603,58 @@
         <state line="2" column="67" selection-start="70" selection-end="70" vertical-scroll-proportion="0.057239056" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/small.arff">
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/DataSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.0" />
+        <state line="8" column="32" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/AttributeType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="10" selection-start="167" selection-end="187" vertical-scroll-proportion="0.0">
+        <state line="4" column="10" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="53" selection-start="238" selection-end="238" vertical-scroll-proportion="0.0">
+        <state line="6" column="29" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/wilkinson.arff">
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="49" selection-start="2959" selection-end="2959" vertical-scroll-proportion="1.8095238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="0" selection-start="944" selection-end="944" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="14" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="36" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.0">
+        <state line="178" column="64" selection-start="7835" selection-end="7858" vertical-scroll-proportion="0.2742857">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/ArffReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="38" selection-start="675" selection-end="675" vertical-scroll-proportion="0.49827588">
+        <state line="46" column="91" selection-start="1820" selection-end="1820" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="4" selection-start="847" selection-end="961" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/small.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="153" selection-end="153" vertical-scroll-proportion="0.29310346">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="23" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.32586208">
           <folding />
         </state>
       </provider>

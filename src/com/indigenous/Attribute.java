@@ -1,16 +1,20 @@
 package com.indigenous;
 
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 
 public class Attribute {
 
   private String name;
   private AttributeType type;
   private List<String> values;
+  private Map<String, Integer> occurrences;
 
   public Attribute() {
     values = new LinkedList<String>();
+    occurrences = new HashMap<String, Integer>();
   }
 
   public void setName(String name) {
@@ -31,7 +35,16 @@ public class Attribute {
     }
   }
 
+  public void addOccurrenceCount(String key) {
+    Integer occurrenceCount = occurrences.get(key);
+    if(occurrenceCount == null) {
+      occurrenceCount = 0;
+    }
+    occurrences.put(key, occurrenceCount + 1);
+  }
+
   public String getName() { return name; }
   public AttributeType getType() { return type; }
   public List<String> getValues() { return values; }
+  public int getOccurrenceCount(String key) { return occurrences.get(key); }
 }

@@ -45,6 +45,7 @@ public class ArffReader {
           int counter = 0;
           for (String s : dataSplit) {
             Attribute attribute = dataSet.getAttribute(counter++);
+            attribute.addOccurrenceCount(s);
             if (attribute.getType() == AttributeType.numeric) {
               attribute.addValue(s);
             }

@@ -81,6 +81,12 @@ public class Driver {
       // Reduce Rules
 
       // Output Rules
+      System.out.println("Decision attributes: [" + decisionAttribute.getName() + "]");
+      System.out.println("Distribution of values for attribute " + decisionAttribute.getName() + ":");
+      for(String s : decisionAttribute.getValues()) {
+        System.out.println("\tValue: " + s + "\tOccurrences: " + decisionAttribute.getOccurrenceCount(s));
+      }
+      System.out.println("Rules for covering " + ":");
 
     } catch (IOException e) {
       e.printStackTrace();
