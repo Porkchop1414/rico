@@ -23,13 +23,14 @@ public class ArffReader {
           String type = scanner.next();
           if (type.equals("numeric")) {
             attribute.setType(AttributeType.numeric);
+            attribute.addPossibleValue("?");
           } else if (type.charAt(0) == '{' && type.charAt(type.length() - 1) == '}') {
             type = type.substring(1, type.length() - 1);   // remove the braces
             attribute.setType(AttributeType.nominal);
 
             String[] values = type.split(",");
             for (String s : values) {
-              attribute.addValue(s);
+              attribute.addPossibleValue(s);
             }
           } else throw new UnsupportedDataTypeException("The supplied file is not a valid ARFF file.");
         } else throw new EOFException();
@@ -38,16 +39,16 @@ public class ArffReader {
       } else if (declaration.equals("@data")) {
         // Process all data
         while (scanner.hasNext()) {
+          dataSet.incrementDataSize();
           String[] dataSplit = scanner.next().split(",");
-          dataSet.addData(new Data(dataSplit));
 
           // Add value to set of possible values of attribute if type numeric
           int counter = 0;
           for (String s : dataSplit) {
             Attribute attribute = dataSet.getAttribute(counter++);
-            attribute.addOccurrenceCount(s);
+            attribute.addActualValue(s);
             if (attribute.getType() == AttributeType.numeric) {
-              attribute.addValue(s);
+              attribute.addPossibleValue(s);
             }
           }
         }

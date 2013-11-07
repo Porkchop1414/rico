@@ -6,11 +6,11 @@ import java.util.List;
 public class DataSet {
   private String name;
   private List<Attribute> attributes;
-  private List<Data> data;
+  private int size;
 
   public DataSet() {
     attributes = new LinkedList<Attribute>();
-    data = new LinkedList<Data>();
+
   }
 
   public void printAttributeList() {
@@ -21,12 +21,10 @@ public class DataSet {
 
   public void setName(String name) { this.name = name; }
   public void addAttribute(Attribute attribute) { this.attributes.add(attribute); }
-  public void addData(Data data) { this.data.add(data); }
+  public void incrementDataSize() { size++; }
 
   public String getName() { return name; }
   public Attribute getAttribute(int index) { return attributes.get(index); }
-  public List<Data> getData() { return data; }
-
-  public int getAttributesSize() { return attributes.size(); }
-  public int getDataSize() { return data.size(); }
+  public int getNumberAttributes() { return attributes.size(); }
+  public int getNumberDataRows() { return size; }
 }

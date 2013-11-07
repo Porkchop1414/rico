@@ -1,50 +1,51 @@
 package com.indigenous;
 
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 
 public class Attribute {
 
   private String name;
   private AttributeType type;
-  private List<String> values;
-  private Map<String, Integer> occurrences;
+  private Set<String> possibleValues;
+  private List<String> valueSet;
 
   public Attribute() {
-    values = new LinkedList<String>();
-    occurrences = new HashMap<String, Integer>();
+    possibleValues = new HashSet<String>();
+    valueSet = new LinkedList<String>();
   }
 
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public void setType(AttributeType type) {
-    this.type = type;
-  }
+  public void setName(String name) { this.name = name; }
+  public void setType(AttributeType type) { this.type = type; }
 
   /**
    * Adds the value to the list of possible values if it does not already exists in that list
    * @param value value to be added to the list
    */
-  public void addValue(String value) {
-    if(!values.contains(value)) {
-      values.add(value);
+  public void addPossibleValue(String value) {
+    if(!possibleValues.contains(value)) {
+      possibleValues.add(value);
     }
   }
 
-  public void addOccurrenceCount(String key) {
-    Integer occurrenceCount = occurrences.get(key);
-    if(occurrenceCount == null) {
-      occurrenceCount = 0;
-    }
-    occurrences.put(key, occurrenceCount + 1);
+  public void addActualValue(String value) {
+    valueSet.add(value);
   }
 
   public String getName() { return name; }
   public AttributeType getType() { return type; }
-  public List<String> getValues() { return values; }
-  public int getOccurrenceCount(String key) { return occurrences.get(key); }
+  public Set<String> getPossibleValues() { return possibleValues; }
+  public String getValue(int index) { return valueSet.get(index); }
+  public int getTotalValueCount() { return valueSet.size(); }
+  public int getValueCount(String key) {
+    int count = 0;
+    for(String s : valueSet) {
+      if(s.equals(key)) {
+        count++;
+      }
+    }
+    return count;
+  }
 }
