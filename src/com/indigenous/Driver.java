@@ -5,13 +5,6 @@ import java.util.*;
 
 public class Driver {
   public static void main(String args[]) {
-    List<Covering> coverings = new LinkedList<Covering>();
-    DataSet dataSet = null;
-    Attribute decisionAttribute = null;
-    int decisionAttributeIndex = -1;
-    int maxNumberAttributes = -1;
-    int minRuleCoverage = -1;
-
     try {
       BufferedReader standardInput = new BufferedReader(new InputStreamReader(System.in));
 
@@ -20,60 +13,22 @@ public class Driver {
       System.out.println("###################################################################");
       System.out.println("Arff File Name (include extension): ");
       String fileName = standardInput.readLine();
-      dataSet = ArffReader.readArffFile(new File(fileName));
+      DataSet dataSet = ArffReader.readArffFile(new File(fileName));
 
-      System.out.println("Enter the number of the decision attribute: ");
-      while(decisionAttribute == null) {
-        dataSet.printAttributeList();
-        decisionAttributeIndex = Integer.parseInt(standardInput.readLine());
-        try {
-          decisionAttribute = dataSet.getAttribute(decisionAttributeIndex);
-        } catch(IndexOutOfBoundsException e) {
-          System.out.println("Please select a valid attribute: ");
-        }
-      }
-
-      System.out.println("Maximum number of attributes in covering: ");
-      while (maxNumberAttributes == -1) {
-        try {
-          maxNumberAttributes = Integer.parseInt(standardInput.readLine());
-          if(maxNumberAttributes < 1 || maxNumberAttributes > dataSet.getNumberAttributes() - 1) {
-            maxNumberAttributes = -1;
-            System.out.println("Please enter a valid maximum number of attributes covering: ");
-          }
-        } catch (NumberFormatException e) {
-          System.out.println("Please enter a valid number: ");
-        }
-      }
-
-      System.out.println("Minimum coverage for a rule: ");
-      while (minRuleCoverage == -1) {
-        try {
-          minRuleCoverage = Integer.parseInt(standardInput.readLine());
-          if(minRuleCoverage < 1 || minRuleCoverage > dataSet.getNumberDataRows()) {
-            minRuleCoverage = -1;
-            System.out.println("Please enter a valid minimum coverage: ");
-          }
-        } catch (NumberFormatException e) {
-          System.out.println("Please enter a valid number: ");
-        }
-      }
+      List<Attribute> decisionAttributes = readDecisionAttribute(standardInput, dataSet);
+      int maxNumberAttributes = readNumberAttributes(standardInput, dataSet);
+      int minRuleCoverage = readMinRuleCoverage(standardInput, dataSet);
+      boolean dropConditions = readDropConditions(standardInput);
 
       standardInput.close();
 
       // Find Coverings
+      Covering decisionCovering = new Covering(decisionAttributes);
+      List<Attribute> nonDecisionAttributes = getNonDecisionAttributes(dataSet, decisionAttributes);
       List<Attribute> coveringAttributes = new LinkedList<Attribute>();
-      coveringAttributes.add(decisionAttribute);
-      Covering decisionCovering = new Covering(coveringAttributes);
-
-      List<Attribute> nonDecisionAttributes = new ArrayList<Attribute>();
-      for(int i = 0; i < dataSet.getNumberAttributes(); i++) {
-        if(i != decisionAttributeIndex) {
-          nonDecisionAttributes.add(dataSet.getAttribute(i));
-        }
-      }
 
       // TODO: Expand this to consider more than one attribute for a covering (all combinations)
+      List<Covering> coverings = new LinkedList<Covering>();
       Iterator<Attribute> iterator = nonDecisionAttributes.iterator();
       while (iterator.hasNext() && !nonDecisionAttributes.isEmpty()) {
         Attribute a = iterator.next();
@@ -86,30 +41,114 @@ public class Driver {
         }
       }
 
-      // Reduce Rules
+      // Drop unnecessary conditions from rules
+      if(dropConditions) {
+
+      }
 
       // Output Rules
-      System.out.println("Relation Name: " + dataSet.getName());
-      System.out.println("Decision attributes: [" + decisionAttribute.getName() + "]");
-      System.out.println("Distribution of values for attribute " + decisionAttribute.getName() + ":");
-      for(String s : decisionAttribute.getPossibleValues()) {
-        System.out.println("\tValue: " + s + "\tOccurrences: " + decisionAttribute.getValueCount(s));
-      }
-      for(Covering c : coverings) {
-        System.out.print("Rules for covering [");
-        List<String> names = c.getAttributeNames();
-        for(int i = 0; i < names.size(); i++) {
-          System.out.print(names.get(i));
-          if(i < names.size() - 1) {
-            System.out.print(", ");
-          }
+      System.out.println("\nRelation Name: " + dataSet.getName());
+      System.out.println("\nDecision attributes: [" + decisionCovering.getAttributeNames() + "]");
+      for(Attribute a : decisionAttributes) {
+        System.out.println("\nDistribution of values for attribute " + a.getName() + ":");
+        for(String s : a.getPossibleValues()) {
+          System.out.println("\tValue: " + s + "\tOccurrences: " + a.getValueCount(s));
         }
-        System.out.println("]:");
-        System.out.println(c.toString(decisionCovering));
+      }
+
+      if(decisionAttributes.size() > 1) {
+        System.out.println("\nDistribution of values for attributes "  + decisionCovering.getAttributeNames() + ":");
+        List<Integer> coverages = decisionCovering.getPossibleValueCoverages();
+        List<String> coverageValues = decisionCovering.getPossibleValues();
+        for(int i = 0; i < coverages.size() && i < coverageValues.size(); i++) {
+          String[] values = coverageValues.get(i).split("\\s+");
+          System.out.print("\tValue: ");
+          for(String value : values) {
+            System.out.print(value + " ");
+          }
+          System.out.println("\tOccurrences: " + coverages.get(i));
+        }
+      }
+
+      for(Covering c : coverings) {
+        System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
       }
 
     } catch (IOException e) {
       e.printStackTrace();
     }
+  }
+
+  static public List<Attribute> readDecisionAttribute(BufferedReader standardInput, DataSet dataSet) throws IOException {
+    List<Attribute> decisionAttributes = new ArrayList<Attribute>();
+    System.out.println("Enter the numbers of the desired decision attributes (space delimited): ");
+    while(decisionAttributes.size() == 0) {
+      dataSet.printAttributeList();
+      try {
+        String[] values = standardInput.readLine().split("\\s+");
+        for(String s : values) {
+          if(Integer.parseInt(s) > dataSet.getNumberAttributes() - 1 || Integer.parseInt(s) < 0) {
+            decisionAttributes.clear();
+            System.out.println("Please select valid attributes: ");
+            break;
+          }
+          decisionAttributes.add(dataSet.getAttribute((Integer.parseInt(s))));
+        }
+      } catch(NumberFormatException e) {
+        decisionAttributes.clear();
+        System.out.println("Please select valid attributes: ");
+      }
+    }
+    return decisionAttributes;
+  }
+
+  static public int readNumberAttributes(BufferedReader standardInput, DataSet dataSet) throws IOException {
+    int maxAttributes = -1;
+    System.out.println("Maximum number of attributes in covering: ");
+    while (maxAttributes == -1) {
+      try {
+        maxAttributes = Integer.parseInt(standardInput.readLine());
+        if(maxAttributes < 1 || maxAttributes > dataSet.getNumberAttributes() - 1) {
+          maxAttributes = -1;
+          System.out.println("Please enter a valid maximum number of attributes covering: ");
+        }
+      } catch (NumberFormatException e) {
+        System.out.println("Please enter a valid number: ");
+      }
+    }
+    return maxAttributes;
+  }
+
+  static public int readMinRuleCoverage(BufferedReader standardInput, DataSet dataSet) throws IOException {
+    int minCoverage = -1;
+    System.out.println("Minimum coverage for a rule: ");
+    while (minCoverage == -1) {
+      try {
+        minCoverage = Integer.parseInt(standardInput.readLine());
+        if(minCoverage < 1 || minCoverage > dataSet.getNumberDataRows()) {
+          minCoverage = -1;
+          System.out.println("Please enter a valid minimum coverage: ");
+        }
+      } catch (NumberFormatException e) {
+        System.out.println("Please enter a valid number: ");
+      }
+    }
+    return minCoverage;
+  }
+
+  static public boolean readDropConditions(BufferedReader standardInput) throws IOException {
+    System.out.println("Drop unnecessary conditions (y/n): ");
+    String input = standardInput.readLine();
+    return (input.charAt(0) == 'y' || input.charAt(0) == 'Y');
+  }
+
+  static public List<Attribute> getNonDecisionAttributes(DataSet dataSet, List<Attribute> decisionAttributes) {
+    List<Attribute> nonDecisionAttributes = new ArrayList<Attribute>();
+    for(int i = 0; i < dataSet.getNumberAttributes(); i++) {
+      if(!decisionAttributes.contains(dataSet.getAttribute(i))) {
+        nonDecisionAttributes.add(dataSet.getAttribute(i));
+      }
+    }
+    return nonDecisionAttributes;
   }
 }
