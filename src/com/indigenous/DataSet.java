@@ -1,5 +1,6 @@
 package com.indigenous;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -9,8 +10,7 @@ public class DataSet {
   private int size;
 
   public DataSet() {
-    attributes = new LinkedList<Attribute>();
-
+    attributes = new ArrayList<Attribute>();
   }
 
   public void printAttributeList() {

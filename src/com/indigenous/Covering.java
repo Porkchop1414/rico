@@ -4,8 +4,8 @@ import java.util.*;
 
 public class Covering {
 
-  List<Attribute> attributes;
-  Map<String, List<Integer>> groupings;
+  List<Attribute> attributes;               // List of attributes in this covering
+  Map<String, List<Integer>> groupings;     // Key is the joint value of the attributes; Value is a list of the indexes in both attributes' value-sets where these joint attributes occur
 
   public Covering(List<Attribute> coveringAttributes) {
     attributes = new ArrayList<Attribute>();
@@ -14,20 +14,23 @@ public class Covering {
     }
 
     groupings = new HashMap<String, List<Integer>>();
-    for (int i = 0; i < coveringAttributes.get(0).getTotalValueCount(); i++) {
-      String s = "";
-      for (int j = 0; j < coveringAttributes.size(); j++) {
-        s += coveringAttributes.get(j).getValue(i);
-        if(j < coveringAttributes.size() - 1) {
-          s += " ";
+    if(attributes.size() > 0) {
+      int totalPossibleValues = attributes.get(0).getTotalValueCount();
+      for (int i = 0; i < totalPossibleValues; i++) {
+        String s = "";
+        for (int j = 0; j < attributes.size(); j++) {
+          s += attributes.get(j).getValue(i);
+          if(j < attributes.size() - 1) {
+            s += " ";
+          }
         }
+        List<Integer> indexes = groupings.get(s);
+        if (indexes == null) {
+          indexes = new ArrayList<Integer>();
+        }
+        indexes.add(i);
+        groupings.put(s, indexes);
       }
-      List<Integer> indexes = groupings.get(s);
-      if (indexes == null) {
-        indexes = new LinkedList<Integer>();
-      }
-      indexes.add(i);
-      groupings.put(s, indexes);
     }
   }
 
@@ -55,6 +58,11 @@ public class Covering {
     return counts;
   }
 
+  /**
+   * Checks that the attribute dependency inequality holds for this covering
+   * @param decisionCovering the decision attribute
+   * @return true if the inequality holds, false otherwise
+   */
   public boolean isValidCovering(Covering decisionCovering) {
     for (Map.Entry<String, List<Integer>> entry : groupings.entrySet()) {
       List<Integer> value = entry.getValue();
@@ -87,14 +95,21 @@ public class Covering {
       }
     }
     s += "]:\n[";
-    for (Map.Entry<String, List<Integer>> entry : groupings.entrySet()) {
+    boolean firstAttribute = true;
+    Set<Map.Entry<String, List<Integer>>> entrySet = groupings.entrySet();
+    for (Map.Entry<String, List<Integer>> entry : entrySet) {
       if (entry.getValue().size() >= minRuleCoverage) {
+        if(!firstAttribute) {
+          s += ", ";
+        } else {
+          firstAttribute = false;
+        }
         String[] values = entry.getKey().split("\\s+");
         s += "[[";
         for (String value : values) {
           s += value + ", ";
         }
-        // decision covering values here
+        // decision covering values
         for (Map.Entry<String, List<Integer>> decisionEntry : decisionCovering.groupings.entrySet()) {
           boolean flag = true;
           for (Integer i : entry.getValue()) {

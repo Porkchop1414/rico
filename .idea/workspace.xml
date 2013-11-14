@@ -8,25 +8,40 @@
   <component name="ChangeListManager">
     <list default="true" id="a37a6534-bf96-4db9-b530-2acd2448c54e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/Covering.java" afterPath="$PROJECT_DIR$/src/com/indigenous/Covering.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/DataSet.java" afterPath="$PROJECT_DIR$/src/com/indigenous/DataSet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/Driver.java" afterPath="$PROJECT_DIR$/src/com/indigenous/Driver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rico.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383869519053" ignored="false" />
-    <file path="/Driver.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383872557726" ignored="false" />
+    <file path="/Dummy.txt" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384465648161" ignored="false" />
+    <file path="/Driver.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384467051484" ignored="false" />
     <file path="/Attribute.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383786054063" ignored="false" />
     <file path="/ArffReader.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383781800687" ignored="false" />
     <file path="/AttributeType.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382026730962" ignored="false" />
     <file path="/ArffData.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382028372558" ignored="false" />
     <file path="/Data.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382038425765" ignored="false" />
-    <file path="/DataSet.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383782340661" ignored="false" />
+    <file path="/DataSet.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384467400975" ignored="false" />
     <file path="$PROJECT_DIR$/../space/src/com/space/game/AsteroidManager.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382053972435" ignored="false" />
     <file path="/AsteroidManager.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382053968583" ignored="false" />
     <file path="$PROJECT_DIR$/../space/src/com/space/game/Star.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382054018301" ignored="false" />
     <file path="$PROJECT_DIR$/../space/src/com/space/game/Planet.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382054119340" ignored="false" />
-    <file path="/Covering.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383872423555" ignored="false" />
+    <file path="/Covering.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384468407680" ignored="false" />
     <file path="/Partition.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383778831931" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/Project.html" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384281939448" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Project.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282541994" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/META-INF/MANIFEST.MF" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384281939926" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Problem.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282559941" ignored="false" />
+    <file path="/Problem.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282377218" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Help.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282563659" ignored="false" />
+    <file path="/Project.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282541994" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/References.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282561864" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Author.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282709796" ignored="false" />
+    <file path="/Author.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282708898" ignored="false" />
+    <file path="/.name" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282757099" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/.idea/.name" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282757099" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/.idea/workspace.xml" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282946746" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/.idea/modules.xml" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282759881" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,12 +106,12 @@
       <file leaf-file-name="Driver.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="61" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.0">
+            <state line="52" column="35" selection-start="2388" selection-end="2403" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#1296#1307#0" expanded="true" />
-                <element signature="e#1456#1466#0" expanded="true" />
-                <element signature="e#3532#3543#0" expanded="true" />
-                <element signature="e#6116#6127#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1414#1424#0" expanded="true" />
+                <element signature="e#1513#1526#0" expanded="true" />
+                <element signature="e#1983#1994#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +120,7 @@
       <file leaf-file-name="DataSet.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/DataSet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="19" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
+            <state line="9" column="46" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -114,37 +129,16 @@
       <file leaf-file-name="ArffReader.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/ArffReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="75" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
+            <state line="32" column="44" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Covering.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Covering.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="18" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1300#1309#0" expanded="true" />
-                <element signature="e#1357#1372#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="small.arff" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/res/small.arff">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="12" selection-start="212" selection-end="212" vertical-scroll-proportion="0.27262315">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Attribute.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="3" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
+            <state line="107" column="76" selection-start="3312" selection-end="3312" vertical-scroll-proportion="3.5389104">
               <folding />
             </state>
           </provider>
@@ -177,10 +171,10 @@
         <option value="$PROJECT_DIR$/src/com/indigenous/Data.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/Partition.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/ArffReader.java" />
-        <option value="$PROJECT_DIR$/src/com/indigenous/DataSet.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/Attribute.java" />
-        <option value="$PROJECT_DIR$/src/com/indigenous/Covering.java" />
         <option value="$PROJECT_DIR$/src/com/indigenous/Driver.java" />
+        <option value="$PROJECT_DIR$/src/com/indigenous/DataSet.java" />
+        <option value="$PROJECT_DIR$/src/com/indigenous/Covering.java" />
       </list>
     </option>
   </component>
@@ -216,7 +210,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -284,6 +277,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -296,7 +290,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../cs342/Lab08" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project-internal-frames" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
@@ -336,8 +330,10 @@
         <option name="LOCAL" value="true" />
       </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <RunnerSettings RunnerId="Run with VisualVM" />
       <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run with VisualVM" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -469,7 +465,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -479,13 +475,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33014354" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32925472" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19370331" sideWeight="0.45272526" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.54727477" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19370331" sideWeight="0.6006674" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -562,10 +560,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1296#1307#0" expanded="true" />
-            <element signature="e#1456#1466#0" expanded="true" />
-            <element signature="e#3532#3543#0" expanded="true" />
-            <element signature="e#6116#6127#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1414#1424#0" expanded="true" />
+            <element signature="e#1513#1526#0" expanded="true" />
+            <element signature="e#1983#1994#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -574,10 +572,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1296#1307#0" expanded="true" />
-            <element signature="e#1456#1466#0" expanded="true" />
-            <element signature="e#3532#3543#0" expanded="true" />
-            <element signature="e#6116#6127#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1414#1424#0" expanded="true" />
+            <element signature="e#1513#1526#0" expanded="true" />
+            <element signature="e#1983#1994#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -586,10 +584,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#1296#1307#0" expanded="true" />
-            <element signature="e#1456#1466#0" expanded="true" />
-            <element signature="e#3532#3543#0" expanded="true" />
-            <element signature="e#6116#6127#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1414#1424#0" expanded="true" />
+            <element signature="e#1513#1526#0" expanded="true" />
+            <element signature="e#1983#1994#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -597,13 +595,6 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="67" selection-start="70" selection-end="70" vertical-scroll-proportion="0.057239056" />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="178" column="64" selection-start="7835" selection-end="7858" vertical-scroll-proportion="0.2742857">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/AttributeType.java">
@@ -618,73 +609,69 @@
         <state line="3762" column="26" selection-start="145809" selection-end="145809" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/DataSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="669" selection-end="669" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/wilkinson.arff">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.312069">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/META-INF/MANIFEST.MF">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/io/BufferedReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="380" column="18" selection-start="12516" selection-end="12516" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="380" column="18" selection-start="12516" selection-end="12516" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/ArffReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="75" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
+        <state line="32" column="44" selection-start="1242" selection-end="1242" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="3" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="18" selection-start="1486" selection-end="1486" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1300#1309#0" expanded="true" />
-            <element signature="e#1357#1372#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="61" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1296#1307#0" expanded="true" />
-            <element signature="e#1456#1466#0" expanded="true" />
-            <element signature="e#3532#3543#0" expanded="true" />
-            <element signature="e#6116#6127#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/small.arff">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="12" selection-start="212" selection-end="212" vertical-scroll-proportion="0.27262315">
+        <state line="14" column="12" selection-start="212" selection-end="212" vertical-scroll-proportion="0.46303502" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/wilkinson.arff">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="16" selection-start="5578" selection-end="5578" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="13" selection-start="1116" selection-end="1116" vertical-scroll-proportion="0.49913344">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="199" column="6" selection-start="9031" selection-end="9031" vertical-scroll-proportion="0.33275563">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/DataSet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="35" selection-start="2388" selection-end="2403" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1414#1424#0" expanded="true" />
+            <element signature="e#1513#1526#0" expanded="true" />
+            <element signature="e#1983#1994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="107" column="76" selection-start="3312" selection-end="3312" vertical-scroll-proportion="3.5389104">
           <folding />
         </state>
       </provider>

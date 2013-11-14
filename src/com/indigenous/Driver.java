@@ -1,6 +1,9 @@
 package com.indigenous;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Driver {
@@ -16,7 +19,7 @@ public class Driver {
       DataSet dataSet = ArffReader.readArffFile(new File(fileName));
 
       List<Attribute> decisionAttributes = readDecisionAttribute(standardInput, dataSet);
-      int maxNumberAttributes = readNumberAttributes(standardInput, dataSet);
+      int maxNumberAttributes = readNumberAttributes(standardInput, dataSet, decisionAttributes.size());
       int minRuleCoverage = readMinRuleCoverage(standardInput, dataSet);
       boolean dropConditions = readDropConditions(standardInput);
 
@@ -25,20 +28,38 @@ public class Driver {
       // Find Coverings
       Covering decisionCovering = new Covering(decisionAttributes);
       List<Attribute> nonDecisionAttributes = getNonDecisionAttributes(dataSet, decisionAttributes);
-      List<Attribute> coveringAttributes = new LinkedList<Attribute>();
+      List<Covering> validCoverings = new LinkedList<Covering>();
+      boolean validAttributes;
 
-      // TODO: Expand this to consider more than one attribute for a covering (all combinations)
-      List<Covering> coverings = new LinkedList<Covering>();
-      Iterator<Attribute> iterator = nonDecisionAttributes.iterator();
-      while (iterator.hasNext() && !nonDecisionAttributes.isEmpty()) {
-        Attribute a = iterator.next();
-        coveringAttributes.clear();
-        coveringAttributes.add(a);
-        Covering temp = new Covering(coveringAttributes);
-        if(temp.isValidCovering(decisionCovering)) {
-          coverings.add(temp);
-          iterator.remove();
+      List<Attribute[]> combinations = new LinkedList<Attribute[]>();
+      for(int i = 1; i <= maxNumberAttributes && i <= nonDecisionAttributes.size(); i++) {
+        processSubsets(combinations, nonDecisionAttributes, i);
+
+        Iterator<Attribute[]> iterator = combinations.iterator();
+        while (iterator.hasNext() && i <= nonDecisionAttributes.size()) {
+          validAttributes = true;
+          Attribute[] attributeCombination = iterator.next();
+          List<Attribute> coveringAttributes = new LinkedList<Attribute>();
+          for(Attribute attribute : attributeCombination) {
+            if(nonDecisionAttributes.contains(attribute)) {
+              coveringAttributes.add(attribute);
+            } else {
+              validAttributes = false;
+              break;
+            }
+          }
+          if(validAttributes) {
+            Covering temp = new Covering(coveringAttributes);
+            if(temp.isValidCovering(decisionCovering)) {
+              validCoverings.add(temp);
+              for(Attribute attribute : attributeCombination) {
+                nonDecisionAttributes.remove(attribute);
+              }
+              iterator.remove();
+            }
+          }
         }
+        combinations.clear();
       }
 
       // Drop unnecessary conditions from rules
@@ -70,7 +91,7 @@ public class Driver {
         }
       }
 
-      for(Covering c : coverings) {
+      for(Covering c : validCoverings) {
         System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
       }
 
@@ -102,13 +123,13 @@ public class Driver {
     return decisionAttributes;
   }
 
-  static public int readNumberAttributes(BufferedReader standardInput, DataSet dataSet) throws IOException {
+  static public int readNumberAttributes(BufferedReader standardInput, DataSet dataSet, int numberDecisionAttributes) throws IOException {
     int maxAttributes = -1;
     System.out.println("Maximum number of attributes in covering: ");
     while (maxAttributes == -1) {
       try {
         maxAttributes = Integer.parseInt(standardInput.readLine());
-        if(maxAttributes < 1 || maxAttributes > dataSet.getNumberAttributes() - 1) {
+        if(maxAttributes < 1 || maxAttributes > dataSet.getNumberAttributes() - numberDecisionAttributes) {
           maxAttributes = -1;
           System.out.println("Please enter a valid maximum number of attributes covering: ");
         }
@@ -150,5 +171,21 @@ public class Driver {
       }
     }
     return nonDecisionAttributes;
+  }
+
+  static void processSubsets(List<Attribute[]> subsetList, List<Attribute> set, int k) {
+    Attribute[] subset = new Attribute[k];
+    processLargerSubsets(subsetList, set, subset, 0, 0);
+  }
+
+  static void processLargerSubsets(List<Attribute[]> subsetList, List<Attribute> set, Attribute[] subset, int subsetSize, int nextIndex) {
+    if (subsetSize == subset.length) {
+      subsetList.add(Arrays.copyOf(subset, subset.length));
+    } else {
+      for (int j = nextIndex; j < set.size(); j++) {
+        subset[subsetSize] = set.get(j);
+        processLargerSubsets(subsetList, set, subset, subsetSize + 1, j + 1);
+      }
+    }
   }
 }
