@@ -7,6 +7,10 @@ import java.io.InputStreamReader;
 import java.util.*;
 
 public class Driver {
+  static List<Covering> validCoverings;
+  static Covering decisionCovering;
+  static Set<Attribute> usedAttributes;
+
   public static void main(String args[]) {
     try {
       BufferedReader standardInput = new BufferedReader(new InputStreamReader(System.in));
@@ -26,40 +30,16 @@ public class Driver {
       standardInput.close();
 
       // Find Coverings
-      Covering decisionCovering = new Covering(decisionAttributes);
+      decisionCovering = new Covering(decisionAttributes);
       List<Attribute> nonDecisionAttributes = getNonDecisionAttributes(dataSet, decisionAttributes);
-      List<Covering> validCoverings = new LinkedList<Covering>();
-      boolean validAttributes;
+      validCoverings = new ArrayList<Covering>();
+      usedAttributes = new HashSet<Attribute>();
 
-      List<Attribute[]> combinations = new LinkedList<Attribute[]>();
       for(int i = 1; i <= maxNumberAttributes && i <= nonDecisionAttributes.size(); i++) {
-        processSubsets(combinations, nonDecisionAttributes, i);
-
-        Iterator<Attribute[]> iterator = combinations.iterator();
-        while (iterator.hasNext() && i <= nonDecisionAttributes.size()) {
-          validAttributes = true;
-          Attribute[] attributeCombination = iterator.next();
-          List<Attribute> coveringAttributes = new LinkedList<Attribute>();
-          for(Attribute attribute : attributeCombination) {
-            if(nonDecisionAttributes.contains(attribute)) {
-              coveringAttributes.add(attribute);
-            } else {
-              validAttributes = false;
-              break;
-            }
-          }
-          if(validAttributes) {
-            Covering temp = new Covering(coveringAttributes);
-            if(temp.isValidCovering(decisionCovering)) {
-              validCoverings.add(temp);
-              for(Attribute attribute : attributeCombination) {
-                nonDecisionAttributes.remove(attribute);
-              }
-              iterator.remove();
-            }
-          }
+        processSubsets(nonDecisionAttributes, i);
+        for(Attribute attribute : usedAttributes) {
+          nonDecisionAttributes.remove(attribute);
         }
-        combinations.clear();
       }
 
       // Drop unnecessary conditions from rules
@@ -94,7 +74,6 @@ public class Driver {
       for(Covering c : validCoverings) {
         System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
       }
-
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -173,18 +152,22 @@ public class Driver {
     return nonDecisionAttributes;
   }
 
-  static void processSubsets(List<Attribute[]> subsetList, List<Attribute> set, int k) {
+  static void processSubsets(List<Attribute> set, int k) {
     Attribute[] subset = new Attribute[k];
-    processLargerSubsets(subsetList, set, subset, 0, 0);
+    processLargerSubsets(set, subset, 0, 0);
   }
 
-  static void processLargerSubsets(List<Attribute[]> subsetList, List<Attribute> set, Attribute[] subset, int subsetSize, int nextIndex) {
+  static void processLargerSubsets(List<Attribute> set, Attribute[] subset, int subsetSize, int nextIndex) {
     if (subsetSize == subset.length) {
-      subsetList.add(Arrays.copyOf(subset, subset.length));
+      Covering temp = new Covering(subset);
+      if(temp.isValidCovering(decisionCovering)) {
+        validCoverings.add(temp);
+        Collections.addAll(usedAttributes, subset);
+      }
     } else {
       for (int j = nextIndex; j < set.size(); j++) {
         subset[subsetSize] = set.get(j);
-        processLargerSubsets(subsetList, set, subset, subsetSize + 1, j + 1);
+        processLargerSubsets(set, subset, subsetSize + 1, j + 1);
       }
     }
   }

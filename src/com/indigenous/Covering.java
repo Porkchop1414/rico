@@ -4,25 +4,33 @@ import java.util.*;
 
 public class Covering {
 
-  List<Attribute> attributes;               // List of attributes in this covering
+  Attribute[] attributes;                   // List of attributes in this covering
   Map<String, List<Integer>> groupings;     // Key is the joint value of the attributes; Value is a list of the indexes in both attributes' value-sets where these joint attributes occur
 
   public Covering(List<Attribute> coveringAttributes) {
-    attributes = new ArrayList<Attribute>();
-    for (Attribute a : coveringAttributes) {
-      attributes.add(a);
+    attributes = new Attribute[coveringAttributes.size()];
+    for (int i = 0; i < coveringAttributes.size(); i++) {
+      attributes[i] = coveringAttributes.get(i);
     }
 
+    createGroupings();
+  }
+
+  public Covering(Attribute[] coveringAttributes) {
+    attributes = new Attribute[coveringAttributes.length];
+    System.arraycopy(coveringAttributes, 0, attributes, 0, coveringAttributes.length);
+
+    createGroupings();
+  }
+
+  private void createGroupings() {
     groupings = new HashMap<String, List<Integer>>();
-    if(attributes.size() > 0) {
-      int totalPossibleValues = attributes.get(0).getTotalValueCount();
+    if(attributes.length > 0) {
+      int totalPossibleValues = attributes[0].getTotalValueCount();
       for (int i = 0; i < totalPossibleValues; i++) {
         String s = "";
-        for (int j = 0; j < attributes.size(); j++) {
-          s += attributes.get(j).getValue(i);
-          if(j < attributes.size() - 1) {
-            s += " ";
-          }
+        for (Attribute a : attributes) {
+          s += a.getValue(i) + " ";
         }
         List<Integer> indexes = groupings.get(s);
         if (indexes == null) {
@@ -36,13 +44,17 @@ public class Covering {
 
   public String getAttributeNames() {
     String s = "";
-    for(int i = 0; i < attributes.size(); i++) {
-      s += attributes.get(i).getName();
-      if(i < attributes.size() - 1) {
+    for(int i = 0; i < attributes.length; i++) {
+      s += attributes[i].getName();
+      if(i < attributes.length - 1) {
         s += ", ";
       }
     }
     return s;
+  }
+
+  public Attribute[] getAttributes() {
+    return attributes;
   }
 
   public List<String> getPossibleValues() {
@@ -88,9 +100,9 @@ public class Covering {
 
   public String getRules(Covering decisionCovering, int minRuleCoverage) {
     String s = "Rules for covering [";
-    for (int i = 0; i < attributes.size(); i++) {
-      s += attributes.get(i).getName();
-      if (i < attributes.size() - 1) {
+    for (int i = 0; i < attributes.length; i++) {
+      s += attributes[i].getName();
+      if (i < attributes.length - 1) {
         s += ", ";
       }
     }
