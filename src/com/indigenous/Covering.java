@@ -25,7 +25,7 @@ public class Covering {
 
   private void createGroupings() {
     groupings = new HashMap<String, List<Integer>>();
-    if(attributes.length > 0) {
+    if (attributes.length > 0) {
       int totalPossibleValues = attributes[0].getTotalValueCount();
       for (int i = 0; i < totalPossibleValues; i++) {
         String s = "";
@@ -42,19 +42,62 @@ public class Covering {
     }
   }
 
+  public void dropUnnecessaryConditions(Covering decisionCovering) {
+    if (attributes.length > 1) {
+      List<String[]> groupingKeyValues = new ArrayList<String[]>();
+      Set<Map.Entry<String, List<Integer>>> entrySet = groupings.entrySet();
+      for (Map.Entry<String, List<Integer>> entry : entrySet) {
+        groupingKeyValues.add(entry.getKey().split("\\s+"));
+      }
+
+      // First look for any rules that have the same decision attribute values and combine them into a single rule if they share any non-decision attribute values
+
+      // Second look for any non-decision attribute values that are unique to a single rule as that is the only attribute that is needed and drop the others
+      for (int i = 0; i < groupingKeyValues.size(); i++) {
+        String[] keyValues = groupingKeyValues.get(i);
+        for (int j = 0; j < keyValues.length; j++) {
+          boolean drop = true;
+          for (int k = 0; k < groupingKeyValues.size() && drop; k++) {
+
+            if (k != i && groupingKeyValues.get(k)[j].equals(keyValues[j])) {
+              // More than one grouping uses same value (cannot be dropped)
+              drop = false;
+            }
+          }
+
+          if (drop) {
+            String oldKey = "";
+            for (String s : keyValues) {
+              oldKey += s + " ";
+            }
+
+            String newKey = "";
+            for (int k = 0; k < keyValues.length; k++) {
+              if (k != j) {
+                newKey += "_" + " ";
+              } else {
+                newKey += keyValues[k] + " ";
+              }
+            }
+
+            groupings.put(newKey, groupings.get(oldKey));
+            groupings.remove(oldKey);
+            break;
+          }
+        }
+      }
+    }
+  }
+
   public String getAttributeNames() {
     String s = "";
-    for(int i = 0; i < attributes.length; i++) {
+    for (int i = 0; i < attributes.length; i++) {
       s += attributes[i].getName();
-      if(i < attributes.length - 1) {
+      if (i < attributes.length - 1) {
         s += ", ";
       }
     }
     return s;
-  }
-
-  public Attribute[] getAttributes() {
-    return attributes;
   }
 
   public List<String> getPossibleValues() {
@@ -64,7 +107,7 @@ public class Covering {
   public List<Integer> getPossibleValueCoverages() {
     List<Integer> counts = new ArrayList<Integer>();
     List<List<Integer>> temp = new ArrayList<List<Integer>>(groupings.values());
-    for(List<Integer> list : temp) {
+    for (List<Integer> list : temp) {
       counts.add(list.size());
     }
     return counts;
@@ -72,6 +115,7 @@ public class Covering {
 
   /**
    * Checks that the attribute dependency inequality holds for this covering
+   *
    * @param decisionCovering the decision attribute
    * @return true if the inequality holds, false otherwise
    */
@@ -111,7 +155,7 @@ public class Covering {
     Set<Map.Entry<String, List<Integer>>> entrySet = groupings.entrySet();
     for (Map.Entry<String, List<Integer>> entry : entrySet) {
       if (entry.getValue().size() >= minRuleCoverage) {
-        if(!firstAttribute) {
+        if (!firstAttribute) {
           s += ", ";
         } else {
           firstAttribute = false;

@@ -35,43 +35,51 @@ public class Driver {
       validCoverings = new ArrayList<Covering>();
       usedAttributes = new HashSet<Attribute>();
 
-      for(int i = 1; i <= maxNumberAttributes && i <= nonDecisionAttributes.size(); i++) {
+      for (int i = 1; i <= maxNumberAttributes && i <= nonDecisionAttributes.size(); i++) {
         processSubsets(nonDecisionAttributes, i);
-        for(Attribute attribute : usedAttributes) {
+        for (Attribute attribute : usedAttributes) {
           nonDecisionAttributes.remove(attribute);
         }
       }
 
-      // Drop unnecessary conditions from rules
-      if(dropConditions) {
+      // START FOR DEBUGGING DROP CONDITIONS
+      for (Covering c : validCoverings) {
+        System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
+      }
+      // END FOR DEBUGGING DROP CONDITIONS
 
+      // Drop unnecessary conditions from rules
+      if (dropConditions) {
+        for (Covering covering : validCoverings) {
+          covering.dropUnnecessaryConditions(decisionCovering);
+        }
       }
 
       // Output Rules
       System.out.println("\nRelation Name: " + dataSet.getName());
       System.out.println("\nDecision attributes: [" + decisionCovering.getAttributeNames() + "]");
-      for(Attribute a : decisionAttributes) {
+      for (Attribute a : decisionAttributes) {
         System.out.println("\nDistribution of values for attribute " + a.getName() + ":");
-        for(String s : a.getPossibleValues()) {
+        for (String s : a.getPossibleValues()) {
           System.out.println("\tValue: " + s + "\tOccurrences: " + a.getValueCount(s));
         }
       }
 
-      if(decisionAttributes.size() > 1) {
-        System.out.println("\nDistribution of values for attributes "  + decisionCovering.getAttributeNames() + ":");
+      if (decisionAttributes.size() > 1) {
+        System.out.println("\nDistribution of values for attributes " + decisionCovering.getAttributeNames() + ":");
         List<Integer> coverages = decisionCovering.getPossibleValueCoverages();
         List<String> coverageValues = decisionCovering.getPossibleValues();
-        for(int i = 0; i < coverages.size() && i < coverageValues.size(); i++) {
+        for (int i = 0; i < coverages.size() && i < coverageValues.size(); i++) {
           String[] values = coverageValues.get(i).split("\\s+");
           System.out.print("\tValue: ");
-          for(String value : values) {
+          for (String value : values) {
             System.out.print(value + " ");
           }
           System.out.println("\tOccurrences: " + coverages.get(i));
         }
       }
 
-      for(Covering c : validCoverings) {
+      for (Covering c : validCoverings) {
         System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
       }
     } catch (IOException e) {
@@ -82,19 +90,19 @@ public class Driver {
   static public List<Attribute> readDecisionAttribute(BufferedReader standardInput, DataSet dataSet) throws IOException {
     List<Attribute> decisionAttributes = new ArrayList<Attribute>();
     System.out.println("Enter the numbers of the desired decision attributes (space delimited): ");
-    while(decisionAttributes.size() == 0) {
+    while (decisionAttributes.size() == 0) {
       dataSet.printAttributeList();
       try {
         String[] values = standardInput.readLine().split("\\s+");
-        for(String s : values) {
-          if(Integer.parseInt(s) > dataSet.getNumberAttributes() - 1 || Integer.parseInt(s) < 0) {
+        for (String s : values) {
+          if (Integer.parseInt(s) > dataSet.getNumberAttributes() - 1 || Integer.parseInt(s) < 0) {
             decisionAttributes.clear();
             System.out.println("Please select valid attributes: ");
             break;
           }
           decisionAttributes.add(dataSet.getAttribute((Integer.parseInt(s))));
         }
-      } catch(NumberFormatException e) {
+      } catch (NumberFormatException e) {
         decisionAttributes.clear();
         System.out.println("Please select valid attributes: ");
       }
@@ -108,7 +116,7 @@ public class Driver {
     while (maxAttributes == -1) {
       try {
         maxAttributes = Integer.parseInt(standardInput.readLine());
-        if(maxAttributes < 1 || maxAttributes > dataSet.getNumberAttributes() - numberDecisionAttributes) {
+        if (maxAttributes < 1 || maxAttributes > dataSet.getNumberAttributes() - numberDecisionAttributes) {
           maxAttributes = -1;
           System.out.println("Please enter a valid maximum number of attributes covering: ");
         }
@@ -125,7 +133,7 @@ public class Driver {
     while (minCoverage == -1) {
       try {
         minCoverage = Integer.parseInt(standardInput.readLine());
-        if(minCoverage < 1 || minCoverage > dataSet.getNumberDataRows()) {
+        if (minCoverage < 1 || minCoverage > dataSet.getNumberDataRows()) {
           minCoverage = -1;
           System.out.println("Please enter a valid minimum coverage: ");
         }
@@ -144,8 +152,8 @@ public class Driver {
 
   static public List<Attribute> getNonDecisionAttributes(DataSet dataSet, List<Attribute> decisionAttributes) {
     List<Attribute> nonDecisionAttributes = new ArrayList<Attribute>();
-    for(int i = 0; i < dataSet.getNumberAttributes(); i++) {
-      if(!decisionAttributes.contains(dataSet.getAttribute(i))) {
+    for (int i = 0; i < dataSet.getNumberAttributes(); i++) {
+      if (!decisionAttributes.contains(dataSet.getAttribute(i))) {
         nonDecisionAttributes.add(dataSet.getAttribute(i));
       }
     }
@@ -160,7 +168,7 @@ public class Driver {
   static void processLargerSubsets(List<Attribute> set, Attribute[] subset, int subsetSize, int nextIndex) {
     if (subsetSize == subset.length) {
       Covering temp = new Covering(subset);
-      if(temp.isValidCovering(decisionCovering)) {
+      if (temp.isValidCovering(decisionCovering)) {
         validCoverings.add(temp);
         Collections.addAll(usedAttributes, subset);
       }
