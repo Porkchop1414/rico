@@ -44,46 +44,63 @@ public class Covering {
 
   public void dropUnnecessaryConditions(Covering decisionCovering) {
     if (attributes.length > 1) {
-      List<String[]> groupingKeyValues = new ArrayList<String[]>();
-      Set<Map.Entry<String, List<Integer>>> entrySet = groupings.entrySet();
-      for (Map.Entry<String, List<Integer>> entry : entrySet) {
-        groupingKeyValues.add(entry.getKey().split("\\s+"));
+      // First look for any non-decision attribute values that are unique to a single rule as that is the only attribute that is needed and drop the others
+      //dropCommonConditions();
+
+      // Second look for any rules that have the same decision attribute values and combine them into a single rule if they share any non-decision attribute values
+      dropDuplicateConditions(decisionCovering);
+    }
+  }
+
+  private void dropDuplicateConditions(Covering decisionCovering) {
+    Set<Map.Entry<String, List<Integer>>> entrySet = decisionCovering.groupings.entrySet();
+    // list of the possible combinations of decision attribute values
+    List<String[]> matchingEntryKeys = new ArrayList<String[]>();
+    for (Map.Entry<String, List<Integer>> decisionEntry : entrySet) {
+      List<Integer> decisionIndexes = decisionEntry.getValue();
+      for (Map.Entry<String, List<Integer>> entry : groupings.entrySet()) {
+        if (decisionIndexes.containsAll(entry.getValue())) {
+          matchingEntryKeys.add(entry.getKey().split("\\s+"));
+        }
       }
+    }
+  }
 
-      // First look for any rules that have the same decision attribute values and combine them into a single rule if they share any non-decision attribute values
+  private void dropCommonConditions() {
+    List<String[]> groupingKeyValues = new ArrayList<String[]>();
+    Set<Map.Entry<String, List<Integer>>> entrySet = groupings.entrySet();
+    for (Map.Entry<String, List<Integer>> entry : entrySet) {
+      groupingKeyValues.add(entry.getKey().split("\\s+"));
+    }
 
-      // Second look for any non-decision attribute values that are unique to a single rule as that is the only attribute that is needed and drop the others
-      for (int i = 0; i < groupingKeyValues.size(); i++) {
-        String[] keyValues = groupingKeyValues.get(i);
-        for (int j = 0; j < keyValues.length; j++) {
-          boolean drop = true;
-          for (int k = 0; k < groupingKeyValues.size() && drop; k++) {
+    for (int i = 0; i < groupingKeyValues.size(); i++) {
+      String[] keyValues = groupingKeyValues.get(i);
+      for (int j = 0; j < keyValues.length; j++) {
+        boolean drop = true;
+        for (int k = 0; k < groupingKeyValues.size() && drop; k++) {
+          if (k != i && groupingKeyValues.get(k)[j].equals(keyValues[j])) {
+            // More than one grouping uses same value (cannot be dropped)
+            drop = false;
+          }
+        }
 
-            if (k != i && groupingKeyValues.get(k)[j].equals(keyValues[j])) {
-              // More than one grouping uses same value (cannot be dropped)
-              drop = false;
+        if (drop) {
+          String oldKey = "";
+          for (String s : keyValues) {
+            oldKey += s + " ";
+          }
+          String newKey = "";
+          for (int k = 0; k < keyValues.length; k++) {
+            if (k != j) {
+              newKey += "_" + " ";
+            } else {
+              newKey += keyValues[k] + " ";
             }
           }
 
-          if (drop) {
-            String oldKey = "";
-            for (String s : keyValues) {
-              oldKey += s + " ";
-            }
-
-            String newKey = "";
-            for (int k = 0; k < keyValues.length; k++) {
-              if (k != j) {
-                newKey += "_" + " ";
-              } else {
-                newKey += keyValues[k] + " ";
-              }
-            }
-
-            groupings.put(newKey, groupings.get(oldKey));
-            groupings.remove(oldKey);
-            break;
-          }
+          groupings.put(newKey, groupings.get(oldKey));
+          groupings.remove(oldKey);
+          break;
         }
       }
     }

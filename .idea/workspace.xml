@@ -8,11 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a37a6534-bf96-4db9-b530-2acd2448c54e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/Covering.java" afterPath="$PROJECT_DIR$/src/com/indigenous/Covering.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/indigenous/Driver.java" afterPath="$PROJECT_DIR$/src/com/indigenous/Driver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rico.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384973078886" ignored="false" />
+    <file path="/Dummy.txt" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385063338144" ignored="false" />
     <file path="/Driver.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384999687336" ignored="false" />
     <file path="/Attribute.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383786054063" ignored="false" />
     <file path="/ArffReader.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383781800687" ignored="false" />
@@ -24,14 +24,14 @@
     <file path="/AsteroidManager.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382053968583" ignored="false" />
     <file path="$PROJECT_DIR$/../space/src/com/space/game/Star.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382054018301" ignored="false" />
     <file path="$PROJECT_DIR$/../space/src/com/space/game/Planet.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1382054119340" ignored="false" />
-    <file path="/Covering.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385000173895" ignored="false" />
+    <file path="/Covering.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385093723057" ignored="false" />
     <file path="/Partition.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1383778831931" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/Project.html" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384281939448" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Project.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282541994" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/src/META-INF/MANIFEST.MF" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384281939926" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Problem.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282559941" ignored="false" />
     <file path="/Problem.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282377218" ignored="false" />
-    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Help.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282563659" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Help.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385060376826" ignored="false" />
     <file path="/Project.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282541994" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/src/code/References.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282561864" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Author.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282709796" ignored="false" />
@@ -40,7 +40,13 @@
     <file path="$PROJECT_DIR$/../project-internal-frames/.idea/.name" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282757099" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/.idea/workspace.xml" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282946746" ignored="false" />
     <file path="$PROJECT_DIR$/../project-internal-frames/.idea/modules.xml" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384282759881" ignored="false" />
-    <file path="/fragment.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1384936855590" ignored="false" />
+    <file path="/fragment.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385059032531" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/QuickSort.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385059451919" ignored="false" />
+    <file path="/QuickSort.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385059451919" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Visualizer.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385060099789" ignored="false" />
+    <file path="/Visualizer.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385059681189" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/Demo.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385060307599" ignored="false" />
+    <file path="$PROJECT_DIR$/../project-internal-frames/src/code/DataType.java" changelist="a37a6534-bf96-4db9-b530-2acd2448c54e" time="1385060376826" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +61,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -91,7 +98,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -106,17 +112,6 @@
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="44" column="15" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#3810#3821#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="small.arff" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/small.arff">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="9" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -143,9 +138,10 @@
       <file leaf-file-name="Covering.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="30" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.3115693">
+            <state line="79" column="8" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.58533794">
               <folding>
-                <element signature="e#1550#1560#0" expanded="true" />
+                <element signature="e#2191#2201#0" expanded="true" />
+                <element signature="e#2660#2670#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,15 +151,6 @@
         <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="16" selection-start="1051" selection-end="1051" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wilkinson.arff" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/wilkinson.arff">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="2" selection-start="5564" selection-end="5564" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,6 +223,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -302,7 +290,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,19 +304,19 @@
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../project-internal-frames" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="rico" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -375,19 +362,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -413,6 +387,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -507,8 +494,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19370331" sideWeight="0.032258064" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9677419" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19370331" sideWeight="0.1913237" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.8086763" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,16 +623,12 @@
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/lang/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="488" column="30" selection-start="19267" selection-end="19267" vertical-scroll-proportion="3.3444881">
-          <folding />
-        </state>
+        <state line="488" column="30" selection-start="19267" selection-end="19267" vertical-scroll-proportion="3.3444881" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/small.arff">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="9" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="14" column="9" selection-start="210" selection-end="210" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/Attribute.java">
@@ -657,9 +640,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/wilkinson.arff">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="2" selection-start="5564" selection-end="5564" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="106" column="2" selection-start="5564" selection-end="5564" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_25/src.zip!/java/util/Map.java">
@@ -672,17 +653,16 @@
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/Driver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="15" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#3810#3821#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/indigenous/Covering.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="30" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.3115693">
+        <state line="79" column="8" selection-start="3075" selection-end="3075" vertical-scroll-proportion="0.58533794">
           <folding>
-            <element signature="e#1550#1560#0" expanded="true" />
+            <element signature="e#2191#2201#0" expanded="true" />
+            <element signature="e#2660#2670#0" expanded="true" />
           </folding>
         </state>
       </provider>
