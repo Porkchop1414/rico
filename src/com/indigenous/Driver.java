@@ -55,7 +55,7 @@ public class Driver {
         }
       }
 
-      // Output Rules
+      // Output RuleSet
       System.out.println("\nRelation Name: " + dataSet.getName());
       System.out.println("\nDecision attributes: [" + decisionCovering.getAttributeNames() + "]");
       for (Attribute a : decisionAttributes) {
