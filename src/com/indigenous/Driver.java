@@ -42,9 +42,14 @@ public class Driver {
         }
       }
 
+      List<RuleSet> ruleSets = new ArrayList<RuleSet>();
+      for(Covering c : validCoverings) {
+        ruleSets.add(c.getRuleSet(decisionCovering));
+      }
+
       // START FOR DEBUGGING DROP CONDITIONS
-      for (Covering c : validCoverings) {
-        System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
+      for (RuleSet r : ruleSets) {
+        System.out.println("\n" + r.toString(minRuleCoverage));
       }
       // END FOR DEBUGGING DROP CONDITIONS
 
@@ -79,8 +84,8 @@ public class Driver {
         }
       }
 
-      for (Covering c : validCoverings) {
-        System.out.println("\n" + c.getRules(decisionCovering, minRuleCoverage));
+      for (RuleSet r : ruleSets) {
+        System.out.println("\n" + r.toString(minRuleCoverage));
       }
     } catch (IOException e) {
       e.printStackTrace();
