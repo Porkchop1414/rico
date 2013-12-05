@@ -47,12 +47,6 @@ public class Driver {
         ruleSets.add(c.getRuleSet(decisionCovering));
       }
 
-      // START FOR DEBUGGING DROP CONDITIONS
-      for (RuleSet r : ruleSets) {
-        System.out.println("\n" + r.toString(minRuleCoverage));
-      }
-      // END FOR DEBUGGING DROP CONDITIONS
-
       // Drop unnecessary conditions from rules
       if (dropConditions) {
         for (RuleSet r : ruleSets) {
