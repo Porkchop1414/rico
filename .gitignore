@@ -7,3 +7,6 @@
 
 # Directories #
 /out
+
+# IntelliJ
+/workspace.xml
