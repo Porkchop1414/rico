@@ -43,27 +43,47 @@ public class Covering {
   }
 
   public void dropUnnecessaryConditions(Covering decisionCovering) {
-    if (attributes.length > 1) {
-      // First look for any non-decision attribute values that are unique to a single rule as that is the only attribute that is needed and drop the others
-      //dropCommonConditions();
-
-      // Second look for any rules that have the same decision attribute values and combine them into a single rule if they share any non-decision attribute values
-      dropDuplicateConditions(decisionCovering);
+    // Generate partition bitsets for each single attribute in the covering
+    List<List<RuleReductionBitSet>> bitSets = new ArrayList<List<RuleReductionBitSet>>();
+    for(Attribute a : attributes) {
+      bitSets.add(new ArrayList<RuleReductionBitSet>());
     }
-  }
-
-  private void dropDuplicateConditions(Covering decisionCovering) {
-    Set<Map.Entry<String, List<Integer>>> entrySet = decisionCovering.groupings.entrySet();
-    // list of the possible combinations of decision attribute values
-    List<String[]> matchingEntryKeys = new ArrayList<String[]>();
-    for (Map.Entry<String, List<Integer>> decisionEntry : entrySet) {
-      List<Integer> decisionIndexes = decisionEntry.getValue();
-      for (Map.Entry<String, List<Integer>> entry : groupings.entrySet()) {
-        if (decisionIndexes.containsAll(entry.getValue())) {
-          matchingEntryKeys.add(entry.getKey().split("\\s+"));
+    List<Map.Entry<String, List<Integer>>> entryList = new ArrayList<Map.Entry<String, List<Integer>>>();
+    entryList.addAll(groupings.entrySet());
+    for (int i = 0; i < entryList.size(); i++) {
+      Map.Entry<String, List<Integer>> entry = entryList.get(i);
+      String[] groupingValues = entry.getKey().split("\\s+");
+      for(int j = 0; j < groupingValues.length; j++) {
+        boolean exists = false;
+        int k;
+        for(k = 0; k < bitSets.get(j).size(); k++) {
+          if(bitSets.get(j).get(k).value.equals(groupingValues[j])) {
+            exists = true;
+            break;
+          }
         }
+        if(!exists) {
+          bitSets.get(j).add(new RuleReductionBitSet(groupings.size(), attributes[j], groupingValues[j]));
+        }
+        bitSets.get(j).get(k).set(i);
       }
     }
+
+    /*for(int i = 0; i < bitSets.size(); i++) {
+      for(int j = 0; j < bitSets.get(i).size(); j++) {
+        System.out.println(bitSets.get(i).get(j).toString());
+      }
+    }*/
+
+    List<RuleReductionBitSet> decisionBitSets = new ArrayList<RuleReductionBitSet>();
+
+
+    // Sort non-decision bitsets
+
+    // loop through each decision bitset and find reductions
+
+    // use reductions to clean up rules
+
   }
 
   private void dropCommonConditions() {
